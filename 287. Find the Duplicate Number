@@ -1,7 +1,8 @@
 /* 
 This code working but have a ''Time Limit Exceeded '' on Large N numbres
 
-**ALGORITHEM**
+**ALGORITHEM** --> USING TWO POINTERS
+Time Comlixty -----> O(n^2)
 
 we start at first index (start)
 if(nums[start]==nums[last]) --> get out of loop
