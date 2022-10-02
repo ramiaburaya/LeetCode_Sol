@@ -1,6 +1,7 @@
 /* 
 This code working but have a ''Time Limit Exceeded '' on Large N numbres
 
+**ALGORITHEM**
 
 we start at first index (start)
 if(nums[start]==nums[last]) --> get out of loop
