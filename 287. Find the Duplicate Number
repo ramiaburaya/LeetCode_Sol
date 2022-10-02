@@ -1,0 +1,32 @@
+/* 
+This code working but have a ''Time Limit Exceeded '' on Large N numbres
+
+
+we start at first index (start)
+if(nums[start]==nums[last]) --> get out of loop
+we go to next item after the start if we do the comparison process for all item except the start item 
+
+and we change the last to (nums.length-1) to do the comparison process for all item except the start item 
+
+otherwie we do last--
+*/
+
+
+class Solution {
+    public int findDuplicate(int[] nums) {
+       
+        int start = 0;
+        int last = nums.length-1;
+        
+        while(start<last){
+            if(nums[start]==nums[last])
+                break;
+            if(last - start == 1){
+                start++;
+                last=nums.length-1;
+            }
+            last--;
+        }
+        return nums[start];
+    }
+}
