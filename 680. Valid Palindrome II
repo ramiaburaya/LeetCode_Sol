@@ -1,0 +1,48 @@
+# 680. Valid Palindrome II
+
+
+### Its Work but shoud be less Time Limit Exceede
+
+
+
+
+public static void main ( String[] args ) {
+
+        System.out.println( validPalindrome( "pidbliassaqozokmtgahluruufwbjdtayuhbxwoicviygilgzduudzgligyviciowxbhuyatdjbwfuurulhagtmkozoqassailbdip" ) );
+
+    }
+
+    public static boolean validPalindrome ( String s ) {
+        boolean res = check( s );
+        if (res) {
+            return true;
+
+        } else {
+
+            int odds = s.length() - 1;
+            int i = 0;
+            while (i <= odds) {
+                StringBuilder build = new StringBuilder(s);
+                build.deleteCharAt(i);
+                res = check( String.valueOf( build ) );
+                if (res)
+                    return true;
+                i++;
+            }
+            return false;
+        }
+    }
+
+    public static boolean check ( String s ) {
+      int i=0;
+      int j=s.length()-1;
+
+      while(i<j){
+          if(s.charAt( i )!=s.charAt( j )){
+              return false;
+          }
+          i++;
+          j--;
+      }
+      return true;
+    }
